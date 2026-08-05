@@ -6,7 +6,7 @@ export const personalInfo = {
   location: "Mumbai, India",
   tagline: "Think Different.",
   status: "Open to opportunities",
-  email: "anupsawant1209@gmail",
+  email: "anupsawant1209@gmail.com",
   aboutCopy: "I am a Software Engineer focused on full-stack development, problem solving, scalable systems, and strong computer science fundamentals. I bridge the gap between creative visual experiences and structured back-end architecture.",
   resumeUrl: "https://onedrive.live.com/?redeem=aHR0cHM6Ly8xZHJ2Lm1zL2IvYy9BNUI3M0U2RUQ0NzA4MjIzL0lRQ01rM3hGX0ExaVRKRkhIWFhBZzVOZUFXOUlvRnJqYmp4ZktZR1ZyU3VlTGJjP2U9eWRFY2RY&cid=A5B73E6ED4708223&id=A5B73E6ED4708223%21s457c938c0dfc4c6291471d75c083935e&parId=A5B73E6ED4708223%21s4c4c89d4fd55429e82894ebb5c174cbf&o=OneUp"
 };
@@ -15,7 +15,7 @@ export const socials = {
   github: "https://github.com/anup-sawant12",
   linkedin: "https://www.linkedin.com/in/anup-sawant-859238259/",
   leetcode: "http://leetcode.com/anup-sawant12",
-  emailMailto: "mailto:anupsawant1209@gmail"
+  emailMailto: "mailto:anupsawant1209@gmail.com"
 };
 
 export const achievements = {
@@ -39,10 +39,10 @@ export const projects = [
     description: "Multi-tenant invoice management system for creating, managing and generating professional invoices for multiple shops.",
     tech: ["React.js", "Tailwind CSS", "Node.js", "Express.js", "MySQL", "Prisma ORM", "JWT", "Cloudinary"],
     liveDemo: "https://smart-invoice-client.vercel.app/",
-    github: "", // Left empty/configurable as requested
+    github: "https://github.com/anup-sawant12/SmartInvoice", // Left empty/configurable as requested
     visualType: "dashboard",
     elements: ["Dashboard", "Invoices", "Shops", "Analytics"],
-    image: "../src/assets/smartInv.png"
+    image: "/smartInv.png"
   },
   {
     id: "02",
@@ -53,7 +53,7 @@ export const projects = [
     github: "https://github.com/anup-sawant12/project-management/",
     visualType: "board",
     elements: ["Workspace", "Projects", "Tasks", "Members"],
-    image: "../src/assets/projectMgmt.png"
+    image: "/projectMgmt.png"
   },
   {
     id: "03",
@@ -64,7 +64,7 @@ export const projects = [
     github: "https://github.com/anup-sawant12/daily-leetcode",
     visualType: "code",
     elements: ["ARRAY", "TREE", "BINARY SEARCH", "LINKED LIST", "STACK"],
-    image: "../src/assets/lc.png"
+    image: "/lc.png"
   }
 ];
 
