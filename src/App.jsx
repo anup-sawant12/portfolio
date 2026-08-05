@@ -16,52 +16,14 @@ import EasterEgg from "./components/EasterEgg";
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
-  const [isDark, setIsDark] = useState(true);
 
-  // Initialize and persist Theme preferences
+  // Permanently initialize and force Dark Theme
   useEffect(() => {
-    const savedTheme = localStorage.getItem("portfolio-theme");
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    
-    const shouldBeDark = savedTheme 
-      ? savedTheme === "dark" 
-      : prefersDark;
-      
-    setIsDark(shouldBeDark);
-    
-    // Apply styling classes to html/body elements
-    if (shouldBeDark) {
-      document.documentElement.classList.add("dark");
-      document.documentElement.classList.remove("light");
-      document.body.classList.add("dark");
-      document.body.classList.remove("light");
-    } else {
-      document.documentElement.classList.add("light");
-      document.documentElement.classList.remove("dark");
-      document.body.classList.add("light");
-      document.body.classList.remove("dark");
-    }
+    document.documentElement.classList.add("dark");
+    document.documentElement.classList.remove("light");
+    document.body.classList.add("dark");
+    document.body.classList.remove("light");
   }, []);
-
-  const toggleTheme = () => {
-    setIsDark((prev) => {
-      const nextTheme = !prev;
-      localStorage.setItem("portfolio-theme", nextTheme ? "dark" : "light");
-      
-      if (nextTheme) {
-        document.documentElement.classList.add("dark");
-        document.documentElement.classList.remove("light");
-        document.body.classList.add("dark");
-        document.body.classList.remove("light");
-      } else {
-        document.documentElement.classList.add("light");
-        document.documentElement.classList.remove("dark");
-        document.body.classList.add("light");
-        document.body.classList.remove("dark");
-      }
-      return nextTheme;
-    });
-  };
 
   return (
     <>
@@ -83,13 +45,13 @@ export default function App() {
 
       {/* Main Container Shell */}
       {!isLoading && (
-        <div className="relative w-full min-h-screen transition-colors duration-300 dark:bg-darkBg light:bg-lightBg">
+        <div className="relative w-full min-h-screen bg-darkBg text-darkTextPrimary">
           
           {/* Scroll progress border indicator */}
           <ScrollProgress />
 
           {/* Navigation Bar */}
-          <Navbar isDark={isDark} toggleTheme={toggleTheme} />
+          <Navbar />
 
           {/* Page Sections */}
           <main className="w-full relative">

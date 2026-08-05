@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import ThemeToggle from "./ThemeToggle";
 import MagneticButton from "./MagneticButton";
 import { personalInfo } from "../data/portfolioData";
 
@@ -13,7 +12,7 @@ const navLinks = [
   { label: "CONTACT", href: "#contact", id: "contact", num: "05" }
 ];
 
-export default function Navbar({ isDark, toggleTheme }) {
+export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
@@ -126,13 +125,8 @@ export default function Navbar({ isDark, toggleTheme }) {
               })}
             </ul>
 
-            {/* Separator */}
-            <div className="w-[1px] h-4 bg-neutral-800 dark:bg-neutral-800 light:bg-slate-200" />
-
-            {/* Theme Toggle & Resume Button */}
+            {/* Resume Button */}
             <div className="flex items-center space-x-4">
-              <ThemeToggle isDark={isDark} toggleTheme={toggleTheme} />
-              
               <MagneticButton strength={0.2}>
                 <a
                   href={personalInfo.resumeUrl}
@@ -149,7 +143,6 @@ export default function Navbar({ isDark, toggleTheme }) {
 
           {/* Mobile Hamburguer Trigger */}
           <div className="flex md:hidden items-center space-x-4">
-            <ThemeToggle isDark={isDark} toggleTheme={toggleTheme} />
             <button
               onClick={() => setMobileMenuOpen(true)}
               className="p-2 text-neutral-400 hover:text-white focus-visible-ring rounded"
