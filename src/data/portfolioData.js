@@ -70,7 +70,7 @@ export const projects = [
       "Service Areas",
       "Notifications"
     ],
-    image: "/sahayog1.png"
+    image: "/sahayog.png"
   },
   {
     id: "03",
