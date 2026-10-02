@@ -70,7 +70,7 @@ export const projects = [
       "Service Areas",
       "Notifications"
     ],
-    image: "https://kommodo.ai/i/YzVzatjns3k8pzUJMDvV"
+    image: "/sahayog1.png"
   },
   {
     id: "03",
