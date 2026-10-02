@@ -46,6 +46,34 @@ export const projects = [
   },
   {
     id: "02",
+    name: "Sahayog",
+    description: "Multi-tenant cooperative service platform connecting skilled workers with customers and labour cooperatives through verified profiles, service booking, and location-based matching.",
+    tech: [
+      "React.js",
+      "Tailwind CSS",
+      "Node.js",
+      "Express.js",
+      "PostgreSQL",
+      "Neon",
+      "Prisma ORM",
+      "JWT"
+    ],
+    liveDemo: "https://sahayog-h64f.vercel.app/",
+    github: "https://github.com/anup-sawant12/Sahayog",
+    visualType: "dashboard",
+    elements: [
+      "Worker Profiles",
+      "Services",
+      "Bookings",
+      "KYC Verification",
+      "Skill Management",
+      "Service Areas",
+      "Notifications"
+    ],
+    image: "https://kommodo.ai/i/YzVzatjns3k8pzUJMDvV"
+  },
+  {
+    id: "03",
     name: "Collaborative Project & Task Management",
     description: "Multi-tenant project management platform for managing workspaces, projects, team members and tasks with role-based collaboration.",
     tech: ["React.js", "Redux Toolkit", "Tailwind CSS", "Node.js", "Express.js", "PostgreSQL", "Prisma ORM", "Clerk", "Inngest", "Nodemailer", "Vercel"],
@@ -56,7 +84,7 @@ export const projects = [
     image: "/projectMgmt.png"
   },
   {
-    id: "03",
+    id: "04",
     name: "Daily LeetCode Generator",
     description: "Web application that generates daily LeetCode problem sets to help users practice Data Structures and Algorithms consistently.",
     tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
